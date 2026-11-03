@@ -18,6 +18,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -154,6 +155,10 @@ public class Test1 {
         extent.flush();
 
         /* Once you are outside this code, the list would be empty */
+
+        // Intentionally fail this test on every run
+        status = "failed";
+        Assert.fail("Intentional failure: Test_1 is configured to always fail");
     }
 
     @Test(description = "To Do App on React App")
@@ -214,6 +219,10 @@ public class Test1 {
         extent.flush();
 
         /* Once you are outside this code, the list would be empty */
+
+        // Intentionally fail this test on every run
+        status = "failed";
+        Assert.fail("Intentional failure: Test_1 is configured to always fail");
     }
 
     @AfterMethod
